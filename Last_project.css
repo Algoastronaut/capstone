@@ -1,0 +1,338 @@
+body {
+    background-color: rgba(236, 246, 254, 1);
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: "Syne", sans-serif;
+}
+
+
+.header {
+    padding: 16px;
+    border-bottom: 1px solid rgba(68, 10, 143, 1);
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_1 {
+    color: rgba(56, 22, 100, 1);
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 42px;
+    cursor: pointer;
+    animation: navPulse 2s infinite;
+    padding: 0 10px;
+}
+
+.nav_1:hover {
+    color: goldenrod;
+}
+
+@keyframes navPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+a {
+    color: rgba(56, 22, 100, 1);
+    font-weight: 500;
+    font-size: 28px;
+    margin-left: 32px;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: goldenrod;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Container styles with enhanced animations */
+.container {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    padding: 100px;
+    overflow: hidden;
+}
+
+.container-1 {
+    padding: 70px 0;
+}
+
+.container-header {
+    color: rgba(56, 22, 100, 1);
+    font-size: 120px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    animation: rotateIn 2s ease forwards;
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotateX(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+.container-header-image {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 25px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.container-2-images {
+    width: calc(100% - 20px);
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(68, 10, 143, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInLeft 2.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container-2-images:hover {
+    transform: scale(1.05);
+    box-shadow: 0px -5px -15px rgba(0, 0, 0, 0.5);
+}
+
+.container-2-images-title,
+.container-2-images-desc {
+    font-family: "Familjen Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(56, 22, 100, 1);
+    margin-top: 5px;
+    text-align: center;
+    animation: slideInLeft 2.5s ease-out;
+}
+
+.container-3 {
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container-3 h1 {
+    font-weight: 700;
+    font-size: 34px;
+    color: rgba(56, 22, 100, 1);
+    animation:  navPulse 2s infinite;
+
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container-3 p {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(56, 22, 100, 1);
+}
+
+.form {
+    margin-top: 50px;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.name1 {
+    width: 335px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(68, 10, 143, 1);
+    padding: 8px 12px 8px 12px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.email {
+    width: 700px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(68, 10, 143, 1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 8px 12px;
+    margin-top: 10px;
+}
+
+.text {
+    width: 700px;
+    height: 124px;
+    border-radius: 8px;
+    border: 1px solid rgba(68, 10, 143, 1);
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+}
+
+.button {
+    width: 88px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: rgba(68, 10, 143, 1);
+    padding: 8px 16px;
+    color: white;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: glowPulse 2s infinite;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0px 0px 5px rgba(68, 10, 143, 0.5);
+    }
+    50% {
+        box-shadow: 0px 0px 25px rgba(68, 10, 143, 0.8);
+    }
+    100% {
+        box-shadow: 0px 0px 5px rgba(68, 10, 143, 0.5);
+    }
+}
+
+.button:hover {
+    background-color: aliceblue;
+    color: rgba(68, 10, 143, 1);
+}
+
+.container-4 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    border-top: 1px solid rgba(56, 22, 100, 1);
+    padding-top: 20px;
+}
+
+.container-4 h1 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: "Syne", sans-serif;
+    color: rgba(68, 10, 143, 1);
+    padding-left: 20px;
+}
+
+.container-4 span {
+    text-align: center;
+    width: 159px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(68, 10, 143, 1);
+    padding: 0;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: auto;
+    color: rgba(68, 10, 143, 1);
+    font-size: 25px;
+    font-family: "Space Mono", monospace;
+    cursor: pointer;
+    animation: pulse 2s infinite, glowPulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.container-4 span:hover {
+    background-color: rgba(68, 10, 143, 1);
+    color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+    .container-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container-header {
+        font-size: 80px;
+    }
+    .name1,
+    .email,
+    .text {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-2 {
+        grid-template-columns: 1fr;
+    }
+    .container-header {
+        font-size: 60px;
+    }
+    .name1,
+    .email,
+    .text {
+        width: 100%;
+    }
+}
